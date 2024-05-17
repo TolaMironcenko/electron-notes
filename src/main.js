@@ -21,10 +21,10 @@ const createWindow = () => {
 
 app.whenReady().then(() => {
     ipcMain.handle('get_all_notes', () => {
-        return `{"notes":${fs.readFileSync('~/.electron-notes/notes.json')}}`
+        return `{"notes":${fs.readFileSync(__dirname + '/data/notes.json')}}`
     })
     ipcMain.on('save_notes_in_file', (event, notes) => {
-        fs.writeFileSync('~/.electron-notes/notes.json', notes.toString())
+        fs.writeFileSync(__dirname + '/data/notes.json', notes.toString())
     })
     createWindow()
 })
