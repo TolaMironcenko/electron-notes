@@ -4,7 +4,6 @@ pkgrel=1
 pkgdesc="notes app written on electronjs"
 arch=('x86_64')
 license=('GPL')
-sha265sums=('SKIP')
 source=("git+https://github.com/TolaMironcenko/electron-notes.git")
 
 build() {
@@ -21,3 +20,9 @@ package() {
     cp -v electron-notes.desktop $pkgdir/usr/share/applications
     cp -v notes.jpg $pkgdir/usr/share/electron-notes
 }
+
+post_install() {
+    chmod 4755 /opt/electron-notes-linux-x64
+}
+
+cksums=('SKIP')
