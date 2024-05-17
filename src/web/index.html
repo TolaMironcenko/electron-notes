@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/button.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Notes</title>
+</head>
+<body>
+    <div class="notes">
+        <div class="topbar">
+            <button class="button" id="newnotebtn">New note</button>
+            <button class="button" style="margin-left: 25vw" id="savenotebtn">Save note</button>
+            <button class="button" id="deletenotebtn">Delete note</button>
+        </div>
+        <div class="squares">
+            <div class="notes-and-search">
+                <input type="text" class="search-input" id="text-to-find" placeholder="Note title">
+                <div class="notessquare"></div>
+            </div>
+            <div class="resizer"></div>
+            <div class="editnotesquare" contenteditable="true" id="null"></div>
+        </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/editnote.js"></script>
+    <script src="js/notes.js"></script>
+    <script src="js/resize.js"></script>
+    <script src="js/search.js"></script>
+</body>
+</html>

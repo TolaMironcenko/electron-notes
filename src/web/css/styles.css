@@ -1,0 +1,119 @@
+.notes {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.squares {
+    height: calc(100% - 60px);
+    display: flex;
+    justify-content: space-between;
+}
+
+.notes-and-search {
+    height: 100%;
+}
+
+.notessquare {
+    min-width: 30vw;
+    max-width: 50vw;
+    height: calc(100% - 30px);
+    overflow-y: auto;
+    margin: 1px;
+}
+
+::-webkit-scrollbar {
+    width: 2px;
+    border-radius: 2px;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+  
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 2px;
+}
+  
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.editnotesquare {
+    width: 70vw;
+    padding: 1%;
+    overflow-y: auto;
+    margin: 1px;
+    /* background-color: yellow; */
+}
+
+[contenteditable] {
+    outline: 0px solid transparent;
+}
+
+.note {
+    position: relative;
+    min-height: 50px;
+    max-height: 60px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+.note::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    left: 33px;
+    right: 10px;
+    background-color: #e8e8eb;
+    bottom: 0;
+}
+
+.notetitle {
+    width: 50%;
+    max-height: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    pointer-events: none;
+    text-align: center;
+}
+
+.note:hover {
+    background-color: rgb(63, 62, 62);
+    
+    transform: translateY(-2px);
+}
+
+.note.active {
+    background-color: rgb(155, 153, 153);
+}
+
+.resizer {
+    width: 3px;
+    background-color: gray;
+    cursor: ew-resize;
+}
+
+.search-input {
+    width: 100%;
+    padding: 5px 15px;
+    border: none;
+    font-size: medium;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.search-input:focus {
+    outline: none;
+    border-bottom: 1px solid gray;
+}

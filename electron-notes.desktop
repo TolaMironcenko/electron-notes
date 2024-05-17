@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=electron-notes
+StartupNotify=true
+Icon=/usr/share/electron-notes/notes.jpg
+Exec=/opt/electron-notes-linux-x64/electron-notes
