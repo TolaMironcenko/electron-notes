@@ -19,12 +19,7 @@ package() {
     cp -rv out/electron-notes-linux-x64 $pkgdir/opt
     cp -v electron-notes.desktop $pkgdir/usr/share/applications
     cp -v notes.jpg $pkgdir/usr/share/electron-notes
-    sudo chmod 4755 $pkgdir/opt/electron-notes-linux-x64
-    sudo chmod -R 4755 $pkgdir/opt/electron-notes-linux-x64/resources
+    chmod -R a+wt $pkgdir/opt/electron-notes-linux-x64
 }
-
-# post_install() {
-#     chmod 4755 /opt/electron-notes-linux-x64
-# }
 
 cksums=('SKIP')
